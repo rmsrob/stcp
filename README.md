@@ -1,10 +1,7 @@
-![WIP](https://img.shields.io/badge/status-wip-red)
-
-[![Latest release](https://img.shields.io/github/v/release/rrobrms/stcp)](https://github.com/rrobrms/stcp/releases/latest)
-[![Go Reference](https://pkg.go.dev/badge/github.com/rrobrms/stcp.svg)](https://pkg.go.dev/github.com/rrobrms/stcp)
-[![Go Report Card](https://goreportcard.com/badge/github.com/rrobrms/stcp)](https://goreportcard.com/report/github.com/rrobrms/stcp)
-[![Coverage Status](https://coveralls.io/repos/github/rrobrms/stcp/badge.svg?branch=master)](https://coveralls.io/github/rrobrms/stcp?branch=master)
-<a href="https://gitpod.io/#https://github.com/rrobrms/stcp" target="_blank">
+[![Go Reference](https://pkg.go.dev/badge/github.com/rmsrob/stcp.svg)](https://pkg.go.dev/github.com/rmsrob/stcp)
+[![Go Report Card](https://goreportcard.com/badge/github.com/rmsrob/stcp)](https://goreportcard.com/report/github.com/rmsrob/stcp)
+[![Coverage Status](https://coveralls.io/repos/github/rmsrob/stcp/badge.svg?branch=master)](https://coveralls.io/github/rmsrob/stcp?branch=master)
+<a href="https://gitpod.io/#https://github.com/rmsrob/stcp" target="_blank">
   <img
     src="https://img.shields.io/badge/Open%20with-Gitpod-908a85?logo=gitpod"
     alt="Contribute with Gitpod"
@@ -13,30 +10,21 @@
 
 # stcp
 
-> description
+> A simple TCP chat server with auto a single reply
 
 ## Install
 ### Prerequisite
-> **Note**
->
->Required:
-- [Foundry](https://book.getfoundry.sh/getting-started/installation)
-- [Solidity](https://docs.soliditylang.org/)
-- [Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth)
-- [Golang V1.19](https://go.dev/doc/install)
-- [Docker](https://docs.docker.com/get-started/overview/)
+> **Note** Required:
+- [Golang V1.20](https://go.dev/doc/install)
 - [Podman](https://podman-desktop.io/downloads)
-- [Hasura CLI](https://hasura.io/docs/latest/graphql/core/hasura-cli/install-hasura-cli.html)
-- [Next.js](https://nextjs.org/docs/basic-features)
 
 ```sh
-git clone git@github.com:rrobrms/stcp.git
+git clone git@github.com:rmsrob/stcp.git
 cd stcp
 go mod tidy         # to download modules
-forge install       # to download the libs
 ```
 
 ## Usage
 ```sh
+go run main.go -listenAdrs=:3000
 ```
-## Deployment
