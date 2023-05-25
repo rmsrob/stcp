@@ -1,4 +1,4 @@
-package main
+package stcp
 
 import (
 	"fmt"
@@ -6,22 +6,22 @@ import (
 )
 
 type Message struct {
-	from    string
-	payload []byte
+	From    string
+	Payload []byte
 }
 
 type Server struct {
 	listenAddr string
 	ln         net.Listener
 	quitChan   chan struct{}
-	msgChan    chan Message
+	MsgChan    chan Message
 }
 
 func NewServer(listenAddr string) *Server {
 	return &Server{
 		listenAddr: listenAddr,
 		quitChan:   make(chan struct{}),
-		msgChan:    make(chan Message, 10),
+		MsgChan:    make(chan Message, 10),
 	}
 }
 
@@ -35,7 +35,7 @@ func (s *Server) Start() error {
 
 	go s.acceptLoop()
 	<-s.quitChan
-	close(s.msgChan)
+	close(s.MsgChan)
 
 	return nil
 }
@@ -65,9 +65,9 @@ func (s *Server) readLoop(conn net.Conn) {
 			continue
 		}
 
-		s.msgChan <- Message{
-			from:    conn.RemoteAddr().String(),
-			payload: buf[:n],
+		s.MsgChan <- Message{
+			From:    conn.RemoteAddr().String(),
+			Payload: buf[:n],
 		}
 
 		conn.Write([]byte("I have spoken!\n\n"))
