@@ -10,7 +10,7 @@
 
 # stcp
 
-> A simple TCP chat server with auto a single reply
+> A simple TCP chat server with auto a single reply.
 
 ## Install
 ### Prerequisite
@@ -21,7 +21,7 @@
 ```sh
 git clone git@github.com:rmsrob/stcp.git
 cd stcp
-go mod tidy         # to download modules
+go mod tidy
 ```
 
 ## Usage
