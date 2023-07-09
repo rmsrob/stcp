@@ -10,7 +10,7 @@
 
 # stcp
 
-> A simple TCP chat server with auto a single reply.
+> A simple TCP chat server with auto "I have spoken" reply.
 
 ## Install
 ### Prerequisite
